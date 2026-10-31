@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.style.setProperty('--instrument-scale',Math.min(innerHeight/1194,innerWidth/1920));</script>
+<link rel="preload" href="fonts/Inter-Black.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="fonts/open-sans-condensed-light.woff" as="font" type="font/woff" crossorigin>
+<title>Синтезатор</title><link rel="icon" href="data:,">
+<link rel="stylesheet" href="reset.css"><link rel="stylesheet" href="style.css">
+<script src="vendor/Tone.js" defer></script><script src="script.js" defer></script>
+</head>
+<body><main class="instrument" aria-label="Синтезатор с двумя голосами и барабанами">
+<section class="voice" data-voice="0" aria-labelledby="synth-1-title"><h2 id="synth-1-title" class="oval"><span>SYNTH 1</span></h2><div class="waves" role="group" aria-label="Тип волны первого синтезатора"></div><label class="volume-label"><input class="volume" type="range" min="0" max="100" value="38" step="0.1" aria-label="Громкость первого синтезатора"><span>VOLUME</span></label></section>
+<section class="voice" data-voice="1" aria-labelledby="synth-2-title"><h2 id="synth-2-title" class="oval"><span>SYNTH 2</span></h2><div class="waves" role="group" aria-label="Тип волны второго синтезатора"></div><label class="volume-label"><input class="volume" type="range" min="0" max="100" value="48" step="0.1" aria-label="Громкость второго синтезатора"><span>VOLUME</span></label></section>
+<section class="rhythm" aria-labelledby="drums-title"><h2 id="drums-title">DRUMS</h2><div id="drum-grid"></div></section>
+<section class="processing" aria-labelledby="fx-title"><h2 id="fx-title">FIX</h2><div id="effects"></div></section>
+<section class="transport-section" aria-labelledby="transport-title"><h2 id="transport-title">TRANSPORT</h2><div class="transport"><button id="play" aria-label="Начать воспроизведение" aria-pressed="false"><span id="play-icon" aria-hidden="true"></span></button><button id="stop" aria-label="Остановить и вернуться к началу"><span class="stop-icon" aria-hidden="true"></span></button></div></section>
+<section class="output-section" aria-labelledby="output-title"><h2 id="output-title">OUTPUT</h2><div class="meter-row"><span>L</span><div class="meter" role="meter" aria-label="Уровень левого канала" aria-valuemin="-60" aria-valuemax="0" aria-valuenow="-60"><div id="meter-l"></div></div><span class="db-label">0 dB</span></div><div class="meter-row"><span>R</span><div class="meter" role="meter" aria-label="Уровень правого канала" aria-valuemin="-60" aria-valuemax="0" aria-valuenow="-60"><div id="meter-r"></div></div><span class="db-label">0 dB</span></div></section>
+<p id="status" class="sr-only" role="status"></p>
+</main></body></html>
